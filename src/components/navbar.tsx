@@ -1,0 +1,89 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
+
+const Navigation = () => {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/Contact", label: "Contact" },
+  ];
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  return (
+    <nav className="w-full bg-white/75 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-8">
+        {/* Brand */}
+        <div className={` text-2xl font-bold`}>
+          <Link href="/">
+            Made By Miguel
+          </Link>
+        </div>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8 text-[#121212] font-medium">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative px-2 py-1 transition-all duration-200 rounded-md ${
+                  isActive
+                    ? "text-blue-600 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-blue-600 after:rounded-full"
+                    : "hover:text-blue-600"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+        
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-[#121212] hover:text-blue-600 transition"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-md border-t border-gray-100">
+          <div className="flex flex-col items-start p-4 space-y-4 text-[#121212] font-medium">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`w-full px-2 py-2 rounded-md transition ${
+                    isActive
+                      ? "bg-blue-50 text-blue-600"
+                      : "hover:bg-blue-100 hover:text-blue-600"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;

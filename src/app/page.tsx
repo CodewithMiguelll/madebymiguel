@@ -1,13 +1,15 @@
 "use client"
 import DecryptedText from "@/components/DecryptedText";
+import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 import { motion } from "motion/react";
+
 
 export default function Home() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-center p-24">
         <motion.div 
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-center items-center gap-8">
           <DecryptedText
             text="Welcome, my name is Miguel!"
             characters="ABCDEFGHI123!"
@@ -15,9 +17,10 @@ export default function Home() {
             sequential={true}
             revealDirection="start"
             animateOn="view"
-            encryptedClassName="font-bold text-3xl"
-            className="font-bold text-3xl"
+            encryptedClassName="font-bold text-xl md:text-3xl"
+            parentClassName="font-black text-xl md:text-3xl"
           />
+<PixelatedCanvas src="/images/miguel-portfolio-image.png" />
         </motion.div>
       </main>
     </>
