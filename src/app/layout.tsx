@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <Navigation/>
       <body
-        className={`antialiased`}
+        className={`antialiased bg-[#282828] text-[#f5f5f5]`}
       >
         {children}
       </body>

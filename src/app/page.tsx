@@ -1,27 +1,55 @@
-"use client"
+"use client";
 import DecryptedText from "@/components/DecryptedText";
-import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+import TextType from "@/components/TextType";
 import { motion } from "motion/react";
+import { Orbitron } from "next/font/google";
 
+const orbitron = Orbitron({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
+  const roles = [
+    "Frontend Developer.",
+    "UI/UX Designer.",
+    "Product Designer.",
+    "Writer.",
+  ];
+
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-        <motion.div 
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-center items-center gap-8">
+      <main className="mt-24 min-h-screen flex flex-col p-24 justify-center items-center">
+        {/* HERO SECTION */}
+        <section className="text-center">
           <DecryptedText
             text="Welcome, my name is Miguel!"
-            characters="ABCDEFGHI123!"
-            speed={75}
-            sequential={true}
-            revealDirection="start"
+            parentClassName={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-center`}
+            encryptedClassName="text-2xl md:text-4xl font-bold mb-6 text-center"
             animateOn="view"
-            encryptedClassName="font-bold text-xl md:text-3xl"
-            parentClassName="font-black text-xl md:text-3xl"
+            sequential
+            speed={85}
+            revealDirection="start"
+            className="font-extrabold"
           />
-<PixelatedCanvas src="/images/miguel-portfolio-image.png" />
-        </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="text-center max-w-2xl text-[#d4d4d4] mb-10"
+          >
+            <div className="flex flex-row gap-2 justify-center font-extrabold">
+              <p>I am a</p>
+              <TextType
+                text={roles}
+                typingSpeed={50}
+                pauseDuration={1500}
+                showCursor
+                cursorCharacter="|"
+                cursorClassName="font-black"
+                loop
+              />
+            </div>
+          </motion.div>
+        </section>
       </main>
     </>
   );

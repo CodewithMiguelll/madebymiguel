@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Monoton } from "next/font/google";
+
+const monoton = Monoton({ subsets: ["latin"], weight: "400" });
 
 
 const Navigation = () => {
@@ -11,20 +14,20 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/Contact", label: "Contact" },
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#Contact", label: "Contact" },
   ];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <nav className="w-full bg-white/75 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl">
+    <nav className="w-full bg-white/5 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-8">
         {/* Brand */}
-        <div className={` text-2xl font-bold`}>
+        <div className={`${monoton.className} text-2xl font-bold`}>
           <Link href="/">
-            Made By Miguel
+            M
           </Link>
         </div>
 
