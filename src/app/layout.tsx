@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Navigation from "@/components/navbar";
 import "./globals.css";
+import CustomCursor from "@/components/custom-cursor";
+import MatrixRain from "@/components/matrix-rain";
 
 
 export const metadata: Metadata = {
@@ -15,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navigation/>
-      <body
-        className={`antialiased bg-[#282828] text-[#f5f5f5]`}
-      >
-        {children}
+      <body className={`antialiased bg-[#141414] text-[#f5f5f5] cursor-none relative`}>
+        <MatrixRain/>
+        <Navigation />
+        <main suppressHydrationWarning>{children}</main>
+        <CustomCursor />
       </body>
     </html>
   );

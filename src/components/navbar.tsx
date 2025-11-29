@@ -22,27 +22,27 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <nav className="w-full bg-white/5 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl">
+    <nav className="w-full bg-white/5 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl cursor-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-8">
         {/* Brand */}
-        <div className={`${monoton.className} text-2xl font-bold`}>
-          <Link href="/">
+        <div className={`${monoton.className} text-3xl font-bold text-green-500`}>
+          <Link className="cursor-none" href="/">
             M
           </Link>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-[#121212] font-medium">
+        <div className="hidden md:flex items-center gap-8 text-[#e5e7e8] font-medium">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-2 py-1 transition-all duration-200 rounded-md ${
+                className={`relative px-2 py-1 transition-all cursor-none text-green-500 ${
                   isActive
-                    ? "text-blue-600 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-blue-600 after:rounded-full"
-                    : "hover:text-blue-600"
+                    ? "text-green-500 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-green-500 after:rounded-full"
+                    : "hover:border-b-green-500 hover:border-b"
                 }`}
               >
                 {link.label}
@@ -54,17 +54,17 @@ const Navigation = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-[#121212] hover:text-blue-600 transition"
+          className="md:hidden text-green-500 hover:text-green-600 transition"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
+          {isOpen ? <X className="cursor-none" size={26} /> : <Menu className="cursor-none" size={26} />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md border-t border-gray-100">
-          <div className="flex flex-col items-start p-4 space-y-4 text-[#121212] font-medium">
+        <div className="md:hidden bg-white/5 shadow-md border-t border-green-400">
+          <div className="flex flex-col items-start p-4 space-y-4 text-green-500 font-medium">
             {links.map((link) => {
               const isActive = pathname === link.href;
               return (
