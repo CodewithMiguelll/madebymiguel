@@ -4,9 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Monoton } from "next/font/google";
+import { Share_Tech_Mono, Press_Start_2P } from "next/font/google";
 
-const monoton = Monoton({ subsets: ["latin"], weight: "400" });
+ const pressStart = Press_Start_2P({ subsets: ["latin"], weight: "400" });
+ const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: "400" });
 
 
 const Navigation = () => {
@@ -25,14 +26,14 @@ const Navigation = () => {
     <nav className="w-full bg-white/5 shadow-sm sticky top-0 left-0 z-50 backdrop-blur-2xl cursor-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-8">
         {/* Brand */}
-        <div className={`${monoton.className} text-3xl font-bold text-green-500`}>
+        <div className={`${pressStart.className} text-3xl font-bold text-green-500`}>
           <Link className="cursor-none" href="/">
             M
           </Link>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 text-[#e5e7e8] font-medium">
+        <div className={`hidden md:flex items-center gap-8 font-medium ${shareTechMono.className}`}>
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -74,8 +75,8 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className={`w-full px-2 py-2 rounded-md transition ${
                     isActive
-                      ? "bg-blue-50 text-blue-600"
-                      : "hover:bg-blue-100 hover:text-blue-600"
+                      ? "text-green-500"
+                      : "hover:border-b-green-500 hover:text-green-500"
                   }`}
                 >
                   {link.label}
