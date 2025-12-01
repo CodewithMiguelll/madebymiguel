@@ -24,7 +24,7 @@ export default function Home() {
         id="/"
       >
         <DecryptedText
-          text="Welcome, my name is Miguel."
+          text="Welcome, my name is Chikaima."
           parentClassName={`${orbitron.className} text-2xl md:text-4xl text-green-500 font-bold mb-6`}
           encryptedClassName="text-2xl md:text-4xl text-green-500 font-bold mb-6"
           animateOn="view"
@@ -93,7 +93,7 @@ export default function Home() {
           className={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
         >
           <DecryptedText
-            text="Who Is Miguel?"
+            text="Who Is Chikaima?"
             encryptedClassName="text-green-500"
             parentClassName={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
             animateOn="view"
@@ -106,7 +106,7 @@ export default function Home() {
         <p
           className={`${dosis.className} max-w-3xl text-center text-green-500 text-lg md:text-xl leading-relaxed`}
         >
-          I’m Miguel, a frontend developer and designer who loves turning ideas
+          I’m Chikaima, a frontend developer and designer who loves turning ideas
           into smooth, functional digital experiences. I build with React,
           Next.js, and intuitive UX principles, always aiming for interfaces
           that feel clean, precise, and genuinely pleasant to use. When I’m not
@@ -119,8 +119,20 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section>
-        
+      <section id="projects" className="mt-56 px-6 flex flex-col justify-center items-center">
+        <h1
+          className={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
+        >
+          <DecryptedText
+            text="My Projects"
+            encryptedClassName="text-green-500"
+            parentClassName={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
+            animateOn="view"
+            sequential
+            speed={85}
+            revealDirection="start"
+          />
+        </h1>
       </section>
     </main>
   );
