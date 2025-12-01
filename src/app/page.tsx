@@ -119,8 +119,20 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section>
-        
+      <section id="projects" className="mt-56 px-6 flex flex-col justify-center items-center">
+        <h1
+          className={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
+        >
+          <DecryptedText
+            text="My Projects"
+            encryptedClassName="text-green-500"
+            parentClassName={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500`}
+            animateOn="view"
+            sequential
+            speed={85}
+            revealDirection="start"
+          />
+        </h1>
       </section>
     </main>
   );
