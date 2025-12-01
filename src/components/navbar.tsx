@@ -17,7 +17,7 @@ const Navigation = () => {
   const links = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#Contact", label: "Contact" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
@@ -28,7 +28,7 @@ const Navigation = () => {
         {/* Brand */}
         <div className={`${pressStart.className} text-3xl font-bold text-green-500`}>
           <Link className="cursor-none" href="/">
-            M
+            C
           </Link>
         </div>
 
