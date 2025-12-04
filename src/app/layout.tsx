@@ -3,6 +3,7 @@ import Navigation from "@/components/navbar";
 import "./globals.css";
 import CustomCursor from "@/components/custom-cursor";
 import MatrixRain from "@/components/matrix-rain";
+import Footer from "@/components/footer";
 
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         <MatrixRain/>
         <Navigation />
         <main suppressHydrationWarning>{children}</main>
+        <Footer />
         <CustomCursor />
       </body>
     </html>
