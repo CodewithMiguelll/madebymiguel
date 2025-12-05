@@ -7,8 +7,12 @@ import Footer from "@/components/footer";
 
 
 export const metadata: Metadata = {
-  title: "Made By Miguel | Portfolio Website",
-  description: "Miguel's portfolio website",
+  title: "Chikaima .U | Portfolio Website",
+  description: "Chikaima's portfolio website",
+  icons: {
+    icon: "/assets/favicon.ico",
+    apple: "/assets/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

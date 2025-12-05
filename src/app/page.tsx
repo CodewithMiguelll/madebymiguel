@@ -1,13 +1,13 @@
 "use client";
 import DecryptedText from "@/components/DecryptedText";
 import TextType from "@/components/TextType";
-import { ArrowDownRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Orbitron, Dosis, IBM_Plex_Sans } from "next/font/google";
+import { useState } from "react";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: "400" });
 const dosis = Dosis({ subsets: ["latin"], weight: "400" });
-const ibmPlexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: "400" });
+
 
 const projects = [
   {
@@ -87,8 +87,34 @@ const projects = [
   },
 ];
 
-
 export default function Home() {
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const res = await fetch("https://formspree.io/f/xrbazwzb", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    const data = await res.json();
+
+    if (data.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  };
+
   const roles = [
     "Frontend Developer",
     "UI/UX Designer",
@@ -297,7 +323,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#b3b3b3] text-center max-w-xl mb-14 leading-relaxed"
+            className="text-green-500 text-center max-w-xl mb-14 leading-relaxed"
           >
             Whether it’s a project, a collaboration, or a wild idea you want to
             bring to life — my inbox is always open. Tap into the network.
@@ -305,11 +331,10 @@ export default function Home() {
 
           {/* Contact Form */}
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-            method="POST"
             className="w-full max-w-lg flex flex-col gap-6"
           >
             {/* Name Field */}
@@ -361,10 +386,24 @@ export default function Home() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="mt-4 px-8 py-3 rounded-md bg-green-500 hover:bg-green-600 text-black font-bold tracking-wide transition-all shadow-[0_0_20px_rgba(0,255,0,0.3)]"
+              disabled={status === "sending"}
+              className="mt-4 px-8 py-3 rounded-md bg-green-500 hover:bg-green-600 text-black font-bold tracking-wide transition-all shadow-[0_0_20px_rgba(0,255,0,0.3)] disabled:opacity-50"
             >
-              Initiate Contact
+              {status === "sending" ? "Transmitting..." : "Initiate Contact"}
             </motion.button>
+
+            {/* Status Message */}
+            {status === "success" && (
+              <p className="text-green-400 text-sm mt-2 animate-pulse">
+                Transmission received. I’ll get back to you shortly.
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-red-500 text-sm mt-2">
+                Transmission failed. Something interfered with the signal.
+              </p>
+            )}
           </motion.form>
         </section>
       </section>
