@@ -245,7 +245,9 @@ export default function Home() {
         <p
           className={`${dosis.className} text-green-500 font-medium text-center mb-6 text-xl`}
         >
-          A showcase of some of my recent projects
+          Every project starts as a glitch in the code, an idea waiting to be
+          solved. <br/>Explore how I decode complex challenges and transform them
+          into intuitive, real-world digital solutions.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
@@ -325,8 +327,11 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-green-500 text-center max-w-xl mb-14 leading-relaxed"
           >
-            Whether it’s a project, a collaboration, or a wild idea you want to
-            bring to life — my inbox is always open. Tap into the network.
+            Do you see the code in the project?{" "}
+            <span className="font-bold">The Oracle has spoken,</span> and it
+            seems we're meant to collaborate. For development missions,
+            potential partnerships, or just to share a truly 'wild idea'—send
+            the input. My channel is always active.
           </motion.p>
 
           {/* Contact Form */}
