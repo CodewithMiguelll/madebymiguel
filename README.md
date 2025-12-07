@@ -71,7 +71,7 @@ Optimized for desktop, tablet, and mobile — including landscape edge-cases.
 ## 📬 Contact
 If you want to collaborate, hire, or discuss a project, feel free to reach out to me directly on the portfolio or via:
 
-**Email:** chikaclothing1960@gmail.com (placeholder)
+**Email:** chikaclothing1960@gmail.com
 
 ---
 
