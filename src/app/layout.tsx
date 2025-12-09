@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "Chikaima Uwakwe | %s",
   },
   description:
-    "Portfolio website of Chikaima Miguel Uwakwe, a software developer specializing in building modern web applications, and product design.",
+    "Portfolio website of Chikaima Miguel Uwakwe, a frontend developer specializing in building modern web applications, and product design.",
   icons: {
     icon: [
       { url: "/assets/favicon.ico" },
