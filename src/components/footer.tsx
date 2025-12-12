@@ -33,7 +33,7 @@ export default function Footer() {
             <Github size={20} />
           </Link>
           <Link
-            href="https://x.com/thebigmigz_"
+            href="https://x.com/Chikaimaaa"
             className="hover:text-green-300 transition-all duration-200"
           >
             <X size={20} />

@@ -295,6 +295,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+
       </section>
 
       {/* CONTACT SECTION */}
@@ -327,7 +328,6 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-green-500 text-center max-w-xl mb-14 leading-relaxed"
           >
-            Do you see the code in the project?{" "}
             <span className="font-bold">The Oracle has spoken,</span> and it
             seems we're meant to collaborate. For development missions,
             potential partnerships, or just to share a truly 'wild idea'—send
