@@ -1,13 +1,28 @@
 "use client";
 import DecryptedText from "@/components/DecryptedText";
 import TextType from "@/components/TextType";
+import { Paintbrush, Sparkles, Figma, Github, Palette } from "lucide-react";
+import { IconHtml, IconBrandReact, IconBrandCss3, IconBrandNextjs, IconBrandTypescript, IconBrandJavascript,  } from "@tabler/icons-react";
 import { motion } from "motion/react";
-import { Orbitron, Dosis, IBM_Plex_Sans } from "next/font/google";
+import { Orbitron, Dosis } from "next/font/google";
 import { useState } from "react";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: "400" });
 const dosis = Dosis({ subsets: ["latin"], weight: "400" });
 
+const techStack = [
+  { name: "HTML5", icon: IconHtml },
+  { name: "CSS3", icon: IconBrandCss3 },
+  { name: "React", icon: IconBrandReact },
+  { name: "Next.js", icon: IconBrandNextjs },
+  { name: "JavaScript", icon: IconBrandJavascript },
+  { name: "TypeScript", icon: IconBrandTypescript },
+  { name: "Tailwind CSS", icon: Paintbrush },
+  { name: "Framer Motion", icon: Sparkles },
+  { name: "Figma", icon: Figma },
+  { name: "GitHub", icon: Github },
+  { name: "Graphic Design", icon: Palette },
+];
 
 const projects = [
   {
@@ -222,6 +237,43 @@ export default function Home() {
           The Matrix, a nod to the worlds that first made me fall in love with
           tech.
         </p>
+        {/* TECH STACK */}
+
+        <h1
+          className={`${orbitron.className} text-2xl md:text-4xl font-bold mb-6 text-green-500 mt-16`}
+        >
+          <DecryptedText
+            text="Tech Stack"
+            encryptedClassName="text-green-500"
+            parentClassName={`${orbitron.className} text-2xl md:text-3xl font-bold mb-6 text-green-500`}
+            animateOn="view"
+            sequential
+            speed={85}
+            revealDirection="start"
+          />
+        </h1>
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+          {techStack.map((tech, index) => {
+            const Icon = tech.icon;
+
+            return (
+              <div
+                key={index}
+                className="group flex flex-col items-center justify-center rounded-xl border border-green-500/20 bg-black/40 p-4 transition-all duration-300 hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.35)]"
+              >
+                <Icon
+                  size={36}
+                  strokeWidth={1.5}
+                  className="mb-3 text-green-400 opacity-80 group-hover:opacity-100 transition"
+                />
+
+                <span className="text-sm text-green-400 opacity-70 group-hover:opacity-100 transition">
+                  {tech.name}
+                </span>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* PROJECTS SECTION */}
@@ -246,8 +298,9 @@ export default function Home() {
           className={`${dosis.className} text-green-500 font-medium text-center mb-6 text-xl`}
         >
           Every project starts as a glitch in the code, an idea waiting to be
-          solved. <br/>Explore how I decode complex challenges and transform them
-          into intuitive, real-world digital solutions.
+          solved. <br />
+          Explore how I decode complex challenges and transform them into
+          intuitive, real-world digital solutions.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
@@ -295,7 +348,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-
       </section>
 
       {/* CONTACT SECTION */}
