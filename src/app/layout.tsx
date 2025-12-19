@@ -46,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-[#141414] cursor-none relative">
+      <body className="bg-[#141414] cursor-none relative selection:bg-green-600 selection:text-white">
         <Navbar />
         <main>{children}</main>
         <Footer />
