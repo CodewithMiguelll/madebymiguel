@@ -8,7 +8,7 @@ import { Orbitron, Dosis } from "next/font/google";
 import { useState } from "react";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: "400" });
-const dosis = Dosis({ subsets: ["latin"], weight: "400" });
+const dosis = Dosis({ subsets: ["latin"], weight: "700" });
 
 const techStack = [
   { name: "HTML5", icon: IconHtml },
@@ -378,7 +378,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-green-500 text-center max-w-xl mb-14 leading-relaxed"
+            className="text-green-500 text-center max-w-xl mb-14 leading-relaxed font-bold"
           >
             <span className="font-bold">The Oracle has spoken,</span> and it
             seems we're meant to collaborate. For development missions,
