@@ -6,6 +6,7 @@ import { IconHtml, IconBrandReact, IconBrandCss3, IconBrandNextjs, IconBrandType
 import { motion } from "motion/react";
 import { Orbitron, Dosis } from "next/font/google";
 import { useState } from "react";
+import Link from "next/link";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: "400" });
 const dosis = Dosis({ subsets: ["latin"], weight: "700" });
@@ -333,18 +334,18 @@ export default function Home() {
               </p>
 
               {/* Link */}
-              <a
+              <Link
                 href={project.link}
                 target="_blank"
                 className="
-            text-green-300 text-sm font-semibold
+            text-green-300 text-sm font-semibold cursor-none
             underline underline-offset-4
             hover:text-green-100
             transition
           "
               >
                 Open Project
-              </a>
+              </Link>
             </div>
           ))}
         </div>
