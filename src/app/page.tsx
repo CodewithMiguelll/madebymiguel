@@ -30,7 +30,6 @@ const projects = [
     title: "Coffeely",
     description:
       "Designed and developed a modern e-commerce site for a coffee brand, featuring smooth navigation, product showcases, and a warm aesthetic that highlights their beverages.",
-    image: "/images/coffeely-logo.png",
     link: "https://coffeely.vercel.app",
   },
 
@@ -38,7 +37,6 @@ const projects = [
     title: "Irressentials",
     description:
       "Built a stylish online store blending multiple product categories into one platform, with a clean layout that makes browsing wines, shoes, and perfumes effortless and engaging.",
-    image: "/images/Irressentials.png",
     link: "https://irressentials.vercel.app",
   },
 
@@ -46,7 +44,6 @@ const projects = [
     title: "Flyte Airways",
     description:
       "A modern travel booking platform built with Next.js and Tailwind CSS. Users can search destinations, track active flights, manage bookings, and enjoy a smooth, mobile-first travel experience.",
-    image: "/images/flyte-logo.png",
     link: "https://flyte-one.vercel.app",
   },
 
@@ -54,14 +51,12 @@ const projects = [
     title: "Rise Of The Rejects Website",
     description:
       "Built with Next.js, TypeScript, and Framer Motion, this project extends my screenplay Rise of the Rejects beyond the page — into a cinematic, interactive world that fuses code, creativity, and conviction.",
-    image: "/images/rotr-portfolio-logo.png",
     link: "https://riseoftherejects.vercel.app",
   },
   {
     title: "Patricia Essentials Logo Suite",
     description:
       "Designed a sleek and functional logo suite for Patricia Essentials, focusing on brand identity and visual appeal.",
-    image: "/images/patricia-essentials.png",
     link: "https://www.canva.com/design/DAGJbq3tjWI/fVqwE7Lx_omyLgnGOISSyQ/view?utm_content=DAGJbq3tjWI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1d0f20707a",
   },
 
@@ -69,28 +64,24 @@ const projects = [
     title: "Cariño Logo Suite & Branding",
     description:
       "Created a warm and inviting logo suite for Cariño, including mockups to demonstrate its application across various mediums.",
-    image: "/images/carino-logo.png",
     link: "https://www.canva.com/design/DAGJRELQQtU/kQy34_gWYRSSpNW29Y4P5g/view?utm_content=DAGJRELQQtU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf0ca49221e",
   },
   {
     title: "African AI Network Branding",
     description:
       "Part of a social media branding campaign — designed a series of posters, onboarding banners, and birthday graphics to give the brand a consistent and engaging digital identity.",
-    image: "/images/aan-poster.png",
     link: "https://www.canva.com/design/DAGeQ0ROiPE/GGF8tL0j84cabldhj1X9Ag/view?utm_content=DAGeQ0ROiPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h98f5d6aabe",
   },
   {
     title: "Memorial Event Branding",
     description:
       "Part of a complete design package: poster, pamphlet, invitation, and VIP Access Card.",
-    image: "/images/gmama-poster.png",
     link: "https://www.canva.com/design/DAGtbQ7HOuE/aIYJUlWfrnX1vDt0Mw7QkA/view?utm_content=DAGtbQ7HOuE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4de9fa66f7",
   },
   {
     title: "Kay's Kitchen Logo Suite & Branding",
     description:
       "Designed a modern, versatile logo for Kay's Kitchen, complete with mockups to showcase its real-world use.",
-    image: "/images/KK-logo.png",
     link: "https://www.canva.com/design/DAGgxoe2WtI/b4UqeTCZNlFh1iy-5ClO5g/view?utm_content=DAGgxoe2WtI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he2d3123f19",
   },
 
@@ -98,7 +89,6 @@ const projects = [
     title: "Coffeely",
     description:
       "Designed a full branding package for the Coffeely website, including logo, favicon, and variations that capture the warmth and richness of coffee culture.",
-    image: "/images/Sub-Logo.png",
     link: "https://www.canva.com/design/DAGGV4J5Xsg/nmXQwbo_mrChzYVhTFRW5A/view?utm_content=DAGGV4J5Xsg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h568606db72",
   },
 ];
