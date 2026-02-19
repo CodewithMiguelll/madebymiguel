@@ -8,7 +8,6 @@ export default function CustomCursor() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Detect mobile or touch-enabled devices
     const checkMobile = () => {
       const mobile =
         window.innerWidth < 768 ||
@@ -20,7 +19,7 @@ export default function CustomCursor() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    if (isMobile) return; // Prevents cursor on mobile devices
+    if (isMobile) return;
 
     const moveHandler = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
@@ -53,23 +52,31 @@ export default function CustomCursor() {
     <>
       {/* Outer Ring */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-50 w-14 h-14 rounded-full border-2 border-green-700 mix-blend-difference"
+        className="pointer-events-none fixed top-0 left-0 z-50 w-14 h-14 rounded-full border border-white/50 mix-blend-difference
+                   shadow-[0_0_20px_rgba(138, 180, 255,0.6),0_0_40px_rgba(138,180,255,0.4)]"
         animate={{
-          x: pos.x - 24,
-          y: pos.y - 24,
+          x: pos.x - 28,
+          y: pos.y - 28,
           scale: hovering ? 1.8 : 1,
-          opacity: hovering ? 0.8 : 0.6,
+          opacity: hovering ? 0.9 : 0.6,
+          boxShadow: hovering
+            ? "0 0 30px rgba(138,180,255,0.9), 0 0 60px rgba(138,180,255,0.6)"
+            : "0 0 20px rgba(138,180,255,0.6), 0 0 40px rgba(138,180,255,0.4)",
         }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
       />
 
       {/* Inner Dot */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-50 w-4 h-4 rounded-full bg-green-700 mix-blend-difference"
+        className="pointer-events-none fixed top-0 left-0 z-50 w-4 h-4 rounded-full bg-gray-500 mix-blend-difference
+                   shadow-[0_0_10px_rgba(138,180,255,0.8),0_0_20px_rgba(138,180,255,0.6)]"
         animate={{
           x: pos.x - 6,
           y: pos.y - 6,
           scale: hovering ? 1.5 : 2,
+          boxShadow: hovering
+            ? "0 0 15px rgba(138,180,255,1),0 0 30px rgba(138,180,255,0.8)"
+            : "0 0 10px rgba(138,180,255,0.8),0 0 20px rgba(138,180,255,0.6)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
       />
