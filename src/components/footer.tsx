@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="text-center md:text-left flex flex-col items-center md:items-start">
           <h3 className="text-white font-medium tracking-wide text-sm flex items-center gap-2">
             © {new Date().getFullYear()}{" "}
-            <span className="text-pink-500/50">•</span> Chikaima Miguel Uwakwe
+            <span>•</span> Chikaima Miguel Uwakwe
           </h3>
           <p className="text-xs text-gray-400 mt-2 font-mono">
             Engineered with Next.js • Designed with Intent • Penned with Purpose
