@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { IconBrandCss3, IconBrandFirebase, IconBrandFramerMotion, IconBrandGithub, IconBrandJavascript, IconBrandNextjs, IconBrandReact, IconBrandSupabase, IconBrandTailwind, IconBrandTypescript, IconBrandX, IconHtml } from "@tabler/icons-react";
 import { Figma, Palette, Book, Pencil } from "lucide-react";
+import Projects from "@/components/projects-overview";
+import Contact from "@/components/contact-form";
 
 const roles =[
   "Frontend Developer",
@@ -48,91 +50,15 @@ const categorizedStack = [
   },
 ];
 
-const projects = [
-  {
-    title: "Flyte Airways",
-    image: "",
-    description:
-      "A modern travel booking platform built with Next.js and Tailwind CSS. Users can search destinations, track active flights, manage bookings, and enjoy a smooth, mobile-first travel experience.",
-    link: "https://flyte-one.vercel.app",
-  },
-
-  {
-    title: "Rise Of The Rejects Website",
-    image: "",
-    description:
-      "Built with Next.js, TypeScript, and Framer Motion, this project extends my story, Rise of the Rejects beyond the page — into a cinematic, interactive world that fuses code, creativity, and conviction.",
-    link: "https://riseoftherejects.vercel.app",
-  },
-
-  {
-    title: "Coffeely",
-    image: "",
-    description:
-      "Designed and developed a modern e-commerce site for a coffee brand, featuring smooth navigation, product showcases, and a warm aesthetic that highlights their beverages.",
-    link: "https://coffeely.vercel.app",
-  },
-
-  {
-    title: "Irressentials",
-    image: "",
-    description:
-      "Built a stylish online store blending multiple product categories into one platform, with a clean layout that makes browsing wines, shoes, and perfumes effortless and engaging.",
-    link: "https://irressentials.vercel.app",
-  },
-
-  {
-    title: "Patricia Essentials Logo Suite",
-    image: "",
-    description:
-      "Designed a sleek and functional logo suite for Patricia Essentials, focusing on brand identity and visual appeal.",
-    link: "https://www.canva.com/design/DAGJbq3tjWI/fVqwE7Lx_omyLgnGOISSyQ/view?utm_content=DAGJbq3tjWI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1d0f20707a",
-  },
-
-  {
-    title: "Cariño Logo Suite & Branding",
-    image: "",
-    description:
-      "Created a warm and inviting logo suite for Cariño, including mockups to demonstrate its application across various mediums.",
-    link: "https://www.canva.com/design/DAGJRELQQtU/kQy34_gWYRSSpNW29Y4P5g/view?utm_content=DAGJRELQQtU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf0ca49221e",
-  },
-  {
-    title: "African AI Network Branding",
-    image: "",
-    description:
-      "Part of a social media branding campaign — designed a series of posters, onboarding banners, and birthday graphics to give the brand a consistent and engaging digital identity.",
-    link: "https://www.canva.com/design/DAGeQ0ROiPE/GGF8tL0j84cabldhj1X9Ag/view?utm_content=DAGeQ0ROiPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h98f5d6aabe",
-  },
-  {
-    title: "Memorial Event Branding",
-    image: "",
-    description:
-      "Part of a complete design package: poster, pamphlet, invitation, and VIP Access Card.",
-    link: "https://www.canva.com/design/DAGtbQ7HOuE/aIYJUlWfrnX1vDt0Mw7QkA/view?utm_content=DAGtbQ7HOuE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4de9fa66f7",
-  },
-  {
-    title: "Kay's Kitchen Logo Suite & Branding",
-    image: "",
-    description:
-      "Designed a modern, versatile logo for Kay's Kitchen, complete with mockups to showcase its real-world use.",
-    link: "https://www.canva.com/design/DAGgxoe2WtI/b4UqeTCZNlFh1iy-5ClO5g/view?utm_content=DAGgxoe2WtI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he2d3123f19",
-  },
-
-  {
-    title: "Coffeely",
-    image: "",
-    description:
-      "Designed a full branding package for the Coffeely website, including logo, favicon, and variations that capture the warmth and richness of coffee culture.",
-    link: "https://www.canva.com/design/DAGGV4J5Xsg/nmXQwbo_mrChzYVhTFRW5A/view?utm_content=DAGGV4J5Xsg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h568606db72",
-  },
-];
-
 
 export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="mt-56 flex flex-col items-center justify-center px-5 text-gray-300">
+      <section
+        id="home"
+        className="mt-56 flex flex-col items-center justify-center px-5 text-gray-300"
+      >
         <BlurText
           text="Hello, my name is Chikaima."
           delay={100}
@@ -202,7 +128,10 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="mt-56 flex flex-col items-center justify-center px-5 text-gray-300">
+      <section
+        id="about"
+        className="mt-60 flex flex-col items-center justify-center px-5 text-gray-300"
+      >
         <BlurText
           text="Who Is Chikaima?"
           delay={100}
@@ -241,7 +170,7 @@ export default function Home() {
       </motion.p>
 
       {/* TECH STACK */}
-      <section className="mt-24 flex flex-col items-center justify-center px-5 text-gray-300">
+      <section className="mt-32 flex flex-col items-center justify-center px-5 text-gray-300">
         <BlurText
           text="Tools & Technologies"
           delay={100}
@@ -284,15 +213,19 @@ export default function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section className="mt-56 flex flex-col items-center justify-center px-5 text-gray-300">
-        <BlurText
-          text="What I've Built"
-          delay={100}
-          animateBy="words"
-          direction="top"
-          className="text-4xl md:text-6xl font-bold "
-        />
-        
+      <section
+        id="projects"
+        className="mt-28 flex flex-col items-center justify-center px-5 text-gray-300"
+      >
+        <Projects />
+      </section>
+
+      {/* CONTACT FORM */}
+      <section
+        id="contact"
+        className="mt-28 flex flex-col items-center justify-center px-5"
+      >
+        <Contact />
       </section>
     </>
   );
