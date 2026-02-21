@@ -45,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body suppressHydrationWarning className="bg-[#141414] relative selection:bg-green-600 selection:text-white scroll-smooth">
+      <body suppressHydrationWarning className="bg-[#141414] relative selection:bg-purple-800 selection:text-white scroll-smooth">
         <Navbar />
         <main>{children}</main>
         <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
