@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import CustomCursor from "@/components/custom-cursor";
-import MatrixRain from "@/components/matrix-rain";
+import Grainient from "@/components/Grainient";
 
 export const metadata: Metadata = {
   title: {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
     template: "Chikaima Uwakwe | %s",
   },
   description:
-    "Portfolio website of Chikaima Miguel Uwakwe, a frontend developer specializing in building modern web applications, and product design.",
+    "Portfolio website of Chikaima Miguel Uwakwe, a frontend developer, writer, and designer specializing in building modern web applications, and product design.",
   icons: {
     icon: [
       { url: "/assets/favicon.ico" },
@@ -46,12 +45,36 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-[#141414] cursor-none relative selection:bg-green-600 selection:text-white">
+      <body suppressHydrationWarning className="bg-[#141414] relative selection:bg-green-600 selection:text-white scroll-smooth">
         <Navbar />
         <main>{children}</main>
+        <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
+          <Grainient
+            color1="#0F0F14"
+            color2="#0E1B2E"
+            color3="#4B2E83"
+            timeSpeed={0.25}
+            colorBalance={0}
+            warpStrength={1}
+            warpFrequency={5}
+            warpSpeed={2}
+            warpAmplitude={50}
+            blendAngle={0}
+            blendSoftness={0.05}
+            rotationAmount={500}
+            noiseScale={2}
+            grainAmount={0.1}
+            grainScale={2}
+            grainAnimated={false}
+            contrast={1.5}
+            gamma={1}
+            saturation={1}
+            centerX={0}
+            centerY={0}
+            zoom={0.9}
+          />
+        </div>
         <Footer />
-        <CustomCursor />
-        <MatrixRain />
       </body>
     </html>
   );
