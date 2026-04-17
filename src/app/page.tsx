@@ -8,6 +8,7 @@ import { IconBrandCss3, IconBrandFirebase, IconBrandFramerMotion, IconBrandGithu
 import { Figma, Palette, Book, Pencil } from "lucide-react";
 import Projects from "@/components/projects-overview";
 import Contact from "@/components/contact-form";
+import Testimonials from "@/components/testimonials";
 
 const roles =[
   "Frontend Developer",
@@ -218,6 +219,14 @@ export default function Home() {
         className="mt-28 flex flex-col items-center justify-center px-5 text-gray-300"
       >
         <Projects />
+      </section>
+
+      {/* SKILLS */}
+      <section
+        id="testimonials"
+        className="mt-28 flex flex-col items-center justify-center px-5 text-gray-300"
+      >
+       <Testimonials/> 
       </section>
 
       {/* CONTACT FORM */}

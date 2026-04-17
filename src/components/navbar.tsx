@@ -18,7 +18,9 @@ const Navigation = () => {
   const links = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
+    { href: "#testimonials", label: "Testimonials" },
     { href: "#contact", label: "Contact" },
+    
   ];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
