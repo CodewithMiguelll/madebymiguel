@@ -70,7 +70,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-br from-white to-gray-500 tracking-tight mb-4"
         >
-          Word on the network.
+          Word on the street.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function Testimonials() {
           transition={{ delay: 0.1 }}
           className="text-lg text-gray-400 max-w-2xl mx-auto"
         >
-          As a creator, I believe in excellence above all. My work speaks for itself. But, of course, don't just take our word for it—hear what others have to say about their experience working with me.
+          As a creator, I believe in excellence above all. My work speaks for itself. But, of course, don't just take my word for it—hear what others have to say about their experience working with me.
         </motion.p>
       </div>
 
