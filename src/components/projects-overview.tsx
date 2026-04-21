@@ -8,6 +8,15 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Do Nothing",
+    image: "/images/do-nothing-preview-image.png",
+    description:
+      "How long can you go doing... nothing? A playful experiment in mindfulness and digital detox, built with Next.js and Tailwind CSS. The app encourages users to take a break from their screens by rewarding them for periods of inactivity, fostering moments of calm in a busy digital world.",
+    link: "https://do-nothing-now.vercel.app",
+    tag: "engineering",
+    status: "Live",
+  },
+  {
     title: "EazyKash",
     image: "/images/eazykash-og-image.png",
     description:
@@ -99,7 +108,7 @@ const projects = [
   },
   {
     title: "Rise of the Rejects",
-    image: "/images/rise-of-the-rejects-book-cover.png",
+    image: "/images/rotr-book-cover-cinematic-variant-2.jpg",
     description:
       "An ongoing saga serialized on Wattpad. Recently ranked #1 in the 'misfits' tag, this project is a deep dive into world-building, narrative design, and continuous character development.",
     link: "https://www.wattpad.com/story/407399764-rise-of-the-rejects",
