@@ -11,10 +11,19 @@ const projects = [
     title: "Do Nothing",
     image: "/images/do-nothing-preview-image.png",
     description:
-      "How long can you go doing... nothing? A playful experiment in mindfulness and digital detox, built with Next.js and Tailwind CSS. The app encourages users to take a break from their screens by rewarding them for periods of inactivity, fostering moments of calm in a busy digital world.",
+      "A playful mindfulness experiment in digital detox. Rewards users for periods of inactivity with Next.js and Tailwind CSS.",
     link: "https://do-nothing-now.vercel.app",
     tag: "engineering",
     status: "Live",
+  },
+  {
+    title: "Cre8r",
+    image: "/images/Cre8r-og-image.png",
+    description:
+      "A digital hub for Nigerian creatives with Next.js and Supabase, combining portfolio, blog, marketplace, and community features.",
+    link: "https://cre8r.pxxl.click",
+    tag: "engineering",
+    status: "Under Development",
   },
   {
     title: "EazyKash",
@@ -23,7 +32,7 @@ const projects = [
       "A PWA fintech MVP for UK-to-Nigeria remittances. Architected with Next.js, Supabase for backend logic, and Paystack integration.",
     link: "https://eazykash.vercel.app",
     tag: "engineering",
-    status: "Under Development",
+    status: "Live",
   },
   {
     title: "Flyte Airways",
