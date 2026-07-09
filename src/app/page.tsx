@@ -1,21 +1,35 @@
-"use client"
+"use client";
 
 import BlurText from "@/components/BlurText";
 import TextType from "@/components/TextType";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { IconBrandCss3, IconBrandFirebase, IconBrandFramerMotion, IconBrandGithub, IconBrandJavascript, IconBrandNextjs, IconBrandReact, IconBrandSupabase, IconBrandTailwind, IconBrandTypescript, IconBrandX, IconHtml } from "@tabler/icons-react";
+import {
+  IconBrandCss3,
+  IconBrandFirebase,
+  IconBrandFramerMotion,
+  IconBrandGithub,
+  IconBrandJavascript,
+  IconBrandNextjs,
+  IconBrandReact,
+  IconBrandSupabase,
+  IconBrandTailwind,
+  IconBrandTypescript,
+  IconBrandX,
+  IconHtml,
+} from "@tabler/icons-react";
 import { Figma, Palette, Book, Pencil } from "lucide-react";
 import Projects from "@/components/projects-overview";
 import Contact from "@/components/contact-form";
 import Testimonials from "@/components/testimonials";
 
-const roles =[
+const roles = [
   "Frontend Developer",
   "UI/UX Designer",
   "Graphic Designer",
   "Writer",
-]
+];
 
 const categorizedStack = [
   {
@@ -50,7 +64,6 @@ const categorizedStack = [
     ],
   },
 ];
-
 
 export default function Home() {
   return (
@@ -221,12 +234,84 @@ export default function Home() {
         <Projects />
       </section>
 
-      {/* SKILLS */}
+      {/* TESTIMONIALS */}
       <section
         id="testimonials"
         className="mt-28 flex flex-col items-center justify-center px-5 text-gray-300"
       >
-       <Testimonials/> 
+        <Testimonials />
+      </section>
+
+      {/* ANNOUNCEMENTS */}
+      <section
+        id="announcement"
+        className="mt-28 flex flex-col items-center justify-center px-5 text-gray-300"
+      >
+        <div className="mt-12 grid w-full max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
+          <div className="space-y-8">
+            <div>
+              <p className="text-3xl md:text-4xl font-bold text-white">
+                My debut novel is leaving Wattpad for an exclusive Kindle
+                release!
+              </p>
+            </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.75, delay: 0.2 }}
+              className="text-base md:text-lg text-gray-400"
+            >
+              After an amazing journey on Wattpad,{" "}
+              <span className="font-semibold text-white">
+                Rise Of The Rejects
+              </span>{" "}
+              is moving to Amazon Kindle as an exclusive release. Keep an eye
+              out for the debut on KDP and join me there for the next chapter of
+              this sci-fi adventure.
+            </motion.p>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link
+                href="https://www.amazon.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-full px-8 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 transition-all duration-300">
+                  Read on Kindle
+                </button>
+              </Link>
+
+              <Link
+                href="https://www.wattpad.com/story/407399764-rise-of-the-rejects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="w-full px-8 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-100 font-semibold hover:bg-white/10 transition-all duration-300">
+                  Wattpad Archive
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.75, delay: 0.3 }}
+            className="relative mx-auto w-full max-w-sm overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.3)]"
+          >
+            <div className="absolute inset-x-0 top-0 h-1" />
+            <Image
+              src="/images/rotr-book-cover-cinematic-variant-2.jpg"
+              alt="Rise Of The Rejects book cover"
+              width={640}
+              height={960}
+              className="h-auto w-full rounded-3xl object-cover"
+            />
+          </motion.div>
+        </div>
       </section>
 
       {/* CONTACT FORM */}
