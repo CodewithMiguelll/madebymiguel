@@ -274,7 +274,7 @@ export default function Home() {
 
             <div className="grid gap-4 sm:grid-cols-2">
               <Link
-                href="https://www.amazon.com/"
+                href="https://www.amazon.com/dp/B0HBLP2ZVZ"
                 target="_blank"
                 rel="noopener noreferrer"
               >
