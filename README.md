@@ -25,8 +25,8 @@ The goal: create a space that feels alive — reactive, fluid, atmospheric — w
 ---
 
 ## Key Features
-### **1. Matrix Rain Background**
-A custom component that renders fullscreen digital rain, responsive across breakpoints.
+### **1. Granient (Grainy gradient) Background**
+A custom component that renders a fullscreen animated gradient background, responsive across breakpoints.
 
 ### **2. Dynamic Hero Section**
 Includes:
