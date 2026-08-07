@@ -120,9 +120,10 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/chikaima-miguel-resume.pdf"
+            href="/chikaima-frontend-developer-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            download={true}
             className=""
           >
             <button
