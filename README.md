@@ -4,7 +4,6 @@ Welcome to the source code of my personal portfolio website — a digital playgr
 
 ## Overview
 This portfolio is a **Next.js** single-page experience powered by:
-- **Matrix-style digital rain** (custom WebGL/canvas-based component)
 - **Framer Motion** animations
 - **ReactBits components** (DecryptedText, TextType, etc.)
 - **Custom cursor**, **glitch effects**, and a cohesive neon-cyber aesthetic
