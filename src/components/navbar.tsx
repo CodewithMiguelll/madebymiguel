@@ -16,11 +16,11 @@ const Navigation = () => {
   }, [pathname]);
 
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#contact", label: "Contact" },
-    
+    { href: "/#about", label: "About" },
+    { href: "/#projects", label: "Projects" },
+    { href: "/#testimonials", label: "Testimonials" },
+    { href: "/#contact", label: "Contact" },
+    { href: "/books", label: "Books" },
   ];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
@@ -84,7 +84,7 @@ const Navigation = () => {
                 {isActive && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute left-0 -bottom-1 h-0.5 w-full bg-pink-500 rounded-full shadow-[0_0_8px_rgba(255,44,85,0.6)]"
+                    className="absolute left-0 -bottom-1 h-0.5 w-full bg-indigo-900 rounded-full shadow-[0_0_8px_rgba(255,44,85,0.6)]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
