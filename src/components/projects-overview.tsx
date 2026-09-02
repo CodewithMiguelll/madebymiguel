@@ -122,7 +122,7 @@ const projects = [
       "An ongoing saga serialized on Wattpad. Recently ranked #1 in the 'misfits' tag, this project is a deep dive into world-building, narrative design, and continuous character development.",
     link: "https://www.wattpad.com/story/407399764-rise-of-the-rejects",
     tag: "writing & design",
-    status: "Ongoing",
+    status: "Complete",
   },
 ];
 
@@ -146,6 +146,8 @@ export default function Projects() {
         return "bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.6)] animate-pulse";
       case "Ongoing":
         return "bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.6)] animate-pulse";
+      case "Complete":
+        return "bg-green-500 shadow-[0_0_8px_rgba(168,85,247,0.6)] animate-pulse";
       default:
         return "bg-gray-500";
     }
