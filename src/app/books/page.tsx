@@ -301,7 +301,7 @@ export default function BooksPage() {
                 Substack Publication
               </p>
               <h2 className="mt-3 text-3xl font-bold text-white md:text-5xl">
-                The Lowers Dispatch
+                Hop on the Distri Run!
               </h2>
               <p className="mt-4 max-w-lg text-base leading-relaxed text-zinc-300">
                 Our primary transmission channel on Substack. Get worldbuilding
